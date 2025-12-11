@@ -1,0 +1,32 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+:root {
+    // font
+    --mainfont: "PretendardVariable";
+
+    // color
+    --main: #6829D7;
+    --black: #000000;
+    --subtext: #232323;
+    --detail: #555555;
+    --lightgray: #989898;
+    --input: #B5B5B5;
+    --whitegray: #B8B8B8;
+    --white: #FFFFFF;
+
+    --dropback: #F9F9F9;
+    --buttonback: #EAEAEA;
+    --calendarback: #FBFBFB;
+
+    // style
+    font-family: var(--mainfont);
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}

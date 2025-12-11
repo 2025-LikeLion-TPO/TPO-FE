@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// setting
+@use "setting/resets";
+@use "setting/common";
+@use "setting/var";
+
+
+// component
+@use "section/common/header";
+@use "section/common/nav";
+
+// pages
+@use "section/calendar/calendar";
+@use "section/home/home";
+@use "section/login/login";
+@use "section/mypage/mypage";
+@use "section/onboarding/onboarding";
+@use "section/people/people";
