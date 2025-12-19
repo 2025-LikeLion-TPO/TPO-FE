@@ -1,1 +1,87 @@
-.Login_wrap {}
+.Login_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 99px;
+
+    .subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--lightgray);
+        margin-bottom: 8px;
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--black);
+        margin-bottom: 7px;
+    }
+
+    .logo {
+        height: 47px;
+        margin-bottom: 50px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .id_input {
+        margin-top: 4px;
+        width: 339px;
+        padding: 19px 22px 18px 22px;
+        border: 1px solid var(--main);
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--black);
+    }
+
+    .id_input::placeholder {
+        color: var(--input);
+    }
+
+    .pw_input {
+        margin-top: 15px;
+        width: 339px;
+        padding: 19px 22px 18px 22px;
+        border: 1px solid var(--main);
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--black);
+    }
+
+    .pw_input::placeholder {
+        color: var(--input);
+    }
+
+    button {
+        width: 358px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 251px;
+        margin-bottom: 15px;
+        padding: 16px 0;
+        background-color: var(--main);
+        border-radius: 10px;
+        border: none;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    .signup {
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--detail);
+        margin-bottom: 72px;
+    }
+}

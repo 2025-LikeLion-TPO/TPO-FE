@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
+import Logo from '../../assets/img/ic_logo.svg';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -16,8 +17,19 @@ const Login = () => {
 
     return (
         <div className="Login_wrap">
-            로그인 페이지입니다.
+            <div className="subtitle">관계의 온도를 맞추는</div>
+            <div className="title">센스있는 사회생활 가이드</div>
+            <div className="logo">
+                <img src={Logo} alt="Logo" />
+            </div>
+            <div className="id_input">
+                <input type="text" placeholder="아이디 입력" />
+            </div>
+            <div className="pw_input">
+                <input type="password" placeholder="비밀번호 입력" />
+            </div>
             <button onClick={handleLoginSuccess}>로그인</button>
+            <div className="signup">회원가입</div>
         </div>
     )
 }
