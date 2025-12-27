@@ -1,0 +1,984 @@
+.CalV2 {
+    padding: 10px 18px 8px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.MonthRow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0 14px;
+}
+
+.MonthLabel {
+    color: #6829D7;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 1px;
+}
+
+.MonthArrow {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #6829D7;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+    opacity: 0.9;
+}
+
+.WeekRow {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.WeekCell {
+    text-align: center;
+    font-size: 12px;
+    color: #000000;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 20px;
+    column-gap: 3px;
+    padding: 4px 0 16px;
+}
+
+.Day {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+
+    .Num {
+        font-size: 14px;
+        color: #000000;
+        font-weight: 500;
+    }
+
+    &.out {
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    &.today .Num {
+        color: #6829D7;
+        font-weight: 600;
+    }
+}
+
+.Pill {
+    max-width: 40px;
+    font-size: 6px;
+    font-weight: 300;
+    color: #fff;
+    background: #6829D7;
+    padding: 2px 3px 2px 3px;
+    border-radius: 999px;
+    line-height: 1.05;
+    transform: translateY(-1px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.Upcoming {
+    margin-top: 18px;
+}
+
+.UpcomingHeader {
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    .left {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 6px;
+    }
+
+    .title {
+        font-weight: 590;
+        font-size: 15px;
+        color: #000000;
+    }
+
+    .count {
+        font-weight: 500;
+        font-size: 15px;
+        color: #555555;
+    }
+
+    .chev {
+        font-weight: 700;
+        font-size: 20px;
+        color: #555555;
+        transform: translateY(1px);
+        opacity: 0.9;
+    }
+}
+
+.CardRow {
+    display: flex;
+    gap: 12px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    scroll-snap-type: x mandatory;
+
+    margin-left: -18px;
+    margin-right: -18px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 2px;
+
+    scroll-padding-left: 18px;
+    scroll-padding-right: 18px;
+}
+
+.CardRow::-webkit-scrollbar {
+    display: none;
+}
+
+.CardRow>.Card:first-child {
+    margin-left: 6px;
+}
+
+.Card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    background-color: #F9F9F9;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    width: 130px;
+    height: 138px;
+}
+
+.CardTop {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.CardDate {
+    font-size: 11px;
+    font-weight: 500;
+    color: #3C3C3C;
+}
+
+.CardDday {
+    font-size: 11px;
+    font-weight: 500;
+    color: #555555;
+    margin-bottom: 2px;
+}
+
+.CardDate,
+.CardDday {
+    line-height: 1.1;
+}
+
+.AvatarWrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.Avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 0.8px solid #6829D7;
+}
+
+.CardTitle {
+    font-size: 11px;
+    font-weight: 500;
+    color: #232323;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.TopActionRow {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4px;
+}
+
+.AddLink {
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 400;
+    color: #555555;
+    transform: translateY(36px) !important;
+}
+
+.BackBtn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3C3C3C;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.SubTitleRow {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.SubTitle {
+    font-size: 16px;
+    font-weight: 550;
+    color: #000;
+}
+
+.SubCount {
+    font-size: 16px;
+    font-weight: 550;
+    color: #555555;
+}
+
+.ListWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.ListCard {
+    border: 1px solid #6829d7;
+    border-radius: 14px;
+    padding: 12px;
+    background: #fff;
+}
+
+.ListDate {
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.ListDday {
+    color: #6829d7;
+    font-weight: 700;
+    margin-left: 6px;
+}
+
+.ListMain {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ListAvatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid #6829d7;
+    background: #e6e6e6;
+}
+
+.ListTitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+}
+
+.ListSub {
+    font-size: 11px;
+    font-weight: 500;
+    color: #777;
+    margin-top: 2px;
+}
+
+.FormWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.FormInput {
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    background: #F9F9F9;
+    color: #232323;
+    padding: 0 12px;
+    font-size: 13px;
+}
+
+.ReminderField {
+    height: 42px;
+    border-radius: 10px;
+    background: #f4f4f4;
+    padding: 0 10px 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.ReminderInput {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    color: #333;
+    padding-right: 8px;
+
+    &::placeholder {
+        color: #B5B5B5;
+    }
+}
+
+.Switch.Switch--small {
+    transform: scale(0.9);
+    transform-origin: center;
+}
+
+
+.FormTextarea {
+    min-height: 90px;
+    border-radius: 10px;
+    border: none;
+    background: #f4f4f4;
+    padding: 10px 12px;
+    font-size: 13px;
+    resize: none;
+}
+
+.FormRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.FormLabel {
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+}
+
+.FormPlus {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    color: #000;
+    padding: 0;
+}
+
+.ChipRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Chip {
+    border: 1px solid #6829d7;
+    background: transparent;
+    color: #6829d7;
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &.selected {
+        background: #6829d7;
+        color: #fff;
+    }
+}
+
+.Switch {
+    position: relative;
+    width: 46px;
+    height: 26px;
+}
+
+.Switch input {
+    display: none;
+}
+
+.Slider {
+    position: absolute;
+    inset: 0;
+    background: #ddd;
+    border-radius: 999px;
+}
+
+.Slider::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: #fff;
+    transition: transform 0.15s ease;
+}
+
+.Switch input:checked+.Slider {
+    background: #6829d7;
+}
+
+.Switch input:checked+.Slider::after {
+    transform: translateX(20px);
+}
+
+.CalV2 .SubmitBtn {
+    width: 100%;
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 12px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background: #6829d7 !important;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.UpItem {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.UpBar {
+    width: 5px;
+    border-radius: 999px;
+    background: #6829d7;
+}
+
+.UpCard {
+    flex: 1;
+    border: 1px solid #6829d7;
+    border-radius: 14px;
+    background: #fff;
+    padding: 12px;
+    position: relative;
+}
+
+.UpHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.UpMenu {
+    position: absolute;
+    top: 26px;
+    right: 4px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+    min-width: 120px;
+    padding: 4px 0;
+    z-index: 10;
+}
+
+.UpMenuItem {
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: transparent;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    cursor: pointer;
+}
+
+.UpMenuItem+.UpMenuItem {
+    border-top: 1px solid #f1f1f1;
+}
+
+.UpMenuItem.danger {
+    color: #e65a5a;
+}
+
+.UpDate {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.UpMD {
+    font-size: 13px;
+    font-weight: 700;
+    color: #555555;
+}
+
+.UpDay {
+    color: #6829d7;
+}
+
+.UpDday {
+    color: #555555;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+
+.UpMore {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0 4px;
+    font-size: 18px;
+    line-height: 1;
+    color: #999;
+}
+
+.UpBody {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.UpAvatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid #6829d7;
+    background: #e6e6e6;
+    flex: 0 0 auto;
+}
+
+.UpText {
+    min-width: 0;
+    flex: 1;
+}
+
+.UpTitle {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #232323;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.UpSub {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.UpTemp {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6829d7;
+}
+
+.UpName {
+    font-size: 11px;
+    font-weight: 450;
+    color: #232323;
+}
+
+.UpMeta {
+    font-size: 9px;
+    font-weight: 400;
+    color: #B8B8B8;
+    margin-bottom: 7px;
+}
+
+.WeekStrip {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+}
+
+.WDay {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.WNum {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+}
+
+.WDay.today .WNum {
+    color: #6829D7;
+    font-weight: 700;
+}
+
+.WDay.selected .WNum {
+    background: #6829D7;
+    color: #fff;
+    font-weight: 700;
+}
+
+.WPill {
+    font-size: 6px;
+    font-weight: 300;
+    color: #fff;
+    background: #6829D7;
+    padding: 2px 3px;
+    border-radius: 999px;
+    line-height: 1.05;
+    max-width: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.ProfileCard {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ProfileLeft {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ProfileAvatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    background: #e6e6e6;
+    border: 1px solid #6829d7;
+    flex-shrink: 0;
+}
+
+.ProfileText {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ProfileNameRow {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.ProfileName {
+    font-size: 13px;
+    font-weight: 600;
+    color: #232323;
+}
+
+.ProfileTemp {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6829d7;
+}
+
+.ProfileRole {
+    font-size: 11px;
+    font-weight: 400;
+    color: #777;
+}
+
+.ProfileMore {
+    border: none;
+    background: transparent;
+    font-size: 11px;
+    font-weight: 500;
+    color: #777;
+    cursor: pointer;
+}
+
+/* ===== 가이드 팝업 ===== */
+.GuideModalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.GuideModal {
+    width: 307px;
+    min-height: 233px;
+    border-radius: 18px;
+    background: #ffffff;
+    padding: 18px 16px;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.GuideModalClose {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    color: #999;
+}
+
+.GuideModalBody {
+    text-align: center;
+    padding-top: 4px;
+}
+
+.GuideModalTitle {
+    font-size: 15px;
+    font-weight: 400;
+    color: #232323;
+    margin-top: 45px;
+}
+
+.GuideModalLine {
+    margin-bottom: 50px;
+
+    .GuideModalText {
+        font-size: 15px;
+        font-weight: 400;
+        color: #232323;
+        margin-bottom: 18px;
+    }
+
+    .GuideModalLinkText {
+        color: #6829d7;
+        font-weight: 500;
+        font-size: 15px;
+    }
+}
+
+.GuideModalPrimary {
+    width: 100%;
+    height: 46px;
+    border-radius: 12px;
+    border: none;
+    background: #6829d7;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ===== 가이드 화면 ===== */
+.GuidePage {
+    padding: 4px 0 40px;
+}
+
+/* 헤더 */
+
+.GuideHeader {
+    margin-bottom: 28px;
+}
+
+.GuideTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.GuideMainLine {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+.GuideNameHighlight {
+    color: #6829d7;
+    font-weight: 600;
+}
+
+.GuideHint {
+    font-size: 11px;
+    color: #999;
+}
+
+/* 공통 섹션 */
+
+.GuideSection {
+    margin-bottom: 22px;
+}
+
+.GuideSectionLabel {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+/* 적정 금액 카드 */
+
+.GuideAmountBox {
+    position: relative;
+    padding: 16px 16px;
+    border-radius: 14px;
+    background: #f7f2ff;
+}
+
+.GuideAmountMain {
+    font-size: 16px;
+    font-weight: 700;
+    color: #6829d7;
+    margin-bottom: 4px;
+}
+
+.GuideAmountSub {
+    font-size: 11px;
+    color: #777;
+}
+
+/* 메시지 카드 */
+
+.GuideMessageBox {
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #F9F9F9;
+    position: relative;
+}
+
+.GuideMessageText {
+    font-size: 13px;
+    color: #232323;
+    font-weight: 500;
+    padding-right: 44px;
+}
+
+.GuideCopyBtn {
+    position: absolute;
+    right: 1px;
+    top: 43px;
+    border-radius: 8px;
+    border: none;
+    background: #ededed;
+    font-size: 11px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* 행동 가이드 */
+
+.GuideSectionHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.GuideSectionLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.GuideSectionLabel {
+    font-size: 14px;
+    font-weight: 700;
+    color: #232323;
+}
+
+.GuideSectionCaption {
+    font-size: 12px;
+    font-weight: 400;
+    color: #555555;
+}
+
+.GuideEditGiftBtn {
+    border: none;
+    background: transparent;
+    font-size: 10px;
+    font-weight: 400;
+    color: #555555;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 50px;
+}
+
+/* 위 요약 카드 */
+
+.GuideActionSummaryBox {
+    padding: 15px 20px;
+    border-radius: 14px;
+    background: #f7f7f7;
+    font-size: 12px;
+    font-weight: 500;
+    color: #232323;
+    margin-bottom: 8px;
+}
+
+/* 아래 내용 카드 */
+
+.GuideActionBox {
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: #F9F9F9;
+}
+
+.GuideActionList {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.GuideActionList li {
+    font-size: 12px;
+    color: #232323;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.GuideActionList li:last-child {
+    margin-bottom: 0;
+}
